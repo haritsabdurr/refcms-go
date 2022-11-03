@@ -20,7 +20,7 @@ type Meta struct {
 }
 
 type MainCategory struct {
-	Id              primitive.ObjectID `json:"id,omitempty"`
+	Id              primitive.ObjectID `bson:"id"`
 	Kategori_Produk string             `json:"kategori_produk,omitempty" validate:"required"`
 	Nama_produk           string             `json:"nama_produk" validate:"required"`
 }
