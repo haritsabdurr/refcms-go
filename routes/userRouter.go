@@ -30,6 +30,6 @@ func UserRoutes(incomingRoutes *gin.Engine) {
 	incomingRoutes.POST("kategori", controller.CreateKategori)               //memasukan data baru pada kategori_produk
 	incomingRoutes.GET("kategori/:kategoriid", controller.GetKategori)      //memanggil satu data kategori denga filter ID
 	incomingRoutes.PUT("kategori/:kategoriid", controller.EditKategori)      //mengedit satu data kategori dengan filter ID
-	incomingRoutes.DELETE("kategori/:kategoriid", controller.DeleteKategori) //menghaspus satu data kategori dengan filter ID
+	incomingRoutes.DELETE("delkategori/:kategoriid", controller.DeleteKategori) //menghaspus satu data kategori dengan filter ID
 	incomingRoutes.GET("kategori", controller.GetAllKategori)                //mengambil semuah data kategori produk
 }
