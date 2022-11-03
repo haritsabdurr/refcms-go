@@ -26,6 +26,12 @@ func UserRoutes(incomingRoutes *gin.Engine) {
 	incomingRoutes.PUT("/meta/:metaId", controller.EditMeta)     //mengedit satu data meta dengan filter ID
 	incomingRoutes.DELETE("/meta/:metaId", controller.DeleteMeta) //menghapus satu data dengan filter ID
 	incomingRoutes.GET("/metas", controller.GetAllMeta)           //mengambill semuah data meta
+	//desc
+	incomingRoutes.POST("/desc", controller.CreateDesc)           //memasukan data meta baru
+	incomingRoutes.GET("/desc/:descId", controller.GetDesc)      //mengambil satu data meta dengan filter ID
+	incomingRoutes.PUT("/desc/:descId", controller.EditDesc)     //mengedit satu data meta dengan filter ID
+	incomingRoutes.DELETE("/desc/:descId", controller.DeleteDesc) //menghapus satu data dengan filter ID
+	incomingRoutes.GET("/descs", controller.GetAllDesc)           //mengambill semuah data meta
 	//Kategori Produk main
 	incomingRoutes.POST("kategori", controller.CreateKategori)               //memasukan data baru pada kategori_produk
 	incomingRoutes.GET("kategori/:kategoriid", controller.GetKategori)      //memanggil satu data kategori denga filter ID

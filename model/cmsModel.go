@@ -19,6 +19,12 @@ type Meta struct {
 	Meta_desc 		string             `json:"meta_desc,omitempty" validate:"required"`
 }
 
+type Desc struct {
+	Id              primitive.ObjectID `json:"id,omitempty"`
+	Title 			string             `json:"title,omitempty" validate:"required"`
+	Desc 			string             `json:"desc,omitempty" validate:"required"`	
+}
+
 type MainCategory struct {
 	Id              primitive.ObjectID `json:"id,omitempty"`
 	Kategori_Produk string             `json:"kategori_produk,omitempty" validate:"required"`
